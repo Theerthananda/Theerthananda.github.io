@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Theerthananda — Dev Links</title>
+
+  <!-- Google Font + FontAwesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --bg-1: #05060c;
+      --bg-2: #0a0f1f;
+      --card-bg: rgba(255,255,255,0.04);
+      --accent: #00eaff;
+      --muted: rgba(255,255,255,0.65);
+      --glass-border: rgba(0,255,255,0.12);
+    }
+    [data-theme="light"]{
+      --bg-1: #f6f7fb;
+      --bg-2: #e9eef8;
+      --card-bg: rgba(10,10,20,0.03);
+      --accent: #0b72ff;
+      --muted: rgba(0,0,0,0.6);
+      --glass-border: rgba(11,114,255,0.12);
+      color: #0b1220;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:"Poppins",sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(0,255,255,0.02), transparent 10%),
+        linear-gradient(180deg,var(--bg-1),var(--bg-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+      color: white;
+    }
+
+    /* Floating orbs */
+    .orb{ position:fixed; border-radius:50%; filter:blur(30px); opacity:0.12; pointer-events:none;}
+    .orb.orb-1{width:360px;height:360px; left:-80px; top:-60px; background:linear-gradient(90deg,#00eaff,#5b9cff);}
+    .orb.orb-2{width:280px;height:280px; right:-60px; bottom:-40px; background:linear-gradient(90deg,#7b61ff,#00eaff);}
+
+    /* top social bar */
+    .topbar{
+      position:fixed; top:18px; left:50%; transform:translateX(-50%);
+      display:flex; gap:12px; align-items:center; z-index:40;
+      padding:6px 12px; border-radius:999px; backdrop-filter:blur(6px);
+      background: rgba(255,255,255,0.02); border:1px solid var(--glass-border);
+    }
+    .topbar a{ color:var(--accent); text-decoration:none; font-size:16px; display:inline-flex; gap:8px; align-items:center; padding:6px; }
+    .topbar a .label{ font-weight:600; color:var(--muted); font-size:13px; opacity:0.9; }
+
+    /* main card */
+    .card{
+      width:100%;
+      max-width:560px;
+      border-radius:18px;
+      padding:36px;
+      background:var(--card-bg);
+      backdrop-filter: blur(10px) saturate(120%);
+      border:1px solid var(--glass-border);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+      position:relative;
+      z-index:20;
+      text-align:center;
+      transition: transform .35s ease;
+    }
+
+    .card:hover{ transform: translateY(-6px) }
+
+    .profile{
+      display:flex; align-items:center; gap:18px; justify-content:center;
+      margin-bottom:16px;
+    }
+    .avatar{
+      width:120px; height:120px; border-radius:999px; overflow:hidden;
+      border:3px solid rgba(0,255,255,0.18); box-shadow: 0 6px 22px rgba(0,255,255,0.06);
+    }
+    .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+    .title{ font-size:26px; font-weight:700; letter-spacing:0.6px; margin:0; }
+    .subtitle{ margin:4px 0 18px; font-size:14px; color:var(--muted); }
+
+    /* links grid */
+    .links{
+      display:grid; gap:12px;
+      grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+      margin-top:6px;
+    }
+    .btn{
+      display:flex; gap:12px; align-items:center; justify-content:center;
+      border-radius:12px; padding:14px 12px; text-decoration:none;
+      color:var(--accent); border:1px solid var(--glass-border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      transition: all .22s ease;
+      font-weight:600;
+    }
+    .btn i{ font-size:18px; width:22px; text-align:center; }
+    .btn:hover{ transform:translateY(-6px); box-shadow: 0 10px 26px rgba(0,0,0,0.45); background: rgba(255,255,255,0.03); }
+
+    /* left column info area */
+    .info-row{ display:flex; gap:12px; align-items:center; justify-content:center; margin-top:18px; flex-wrap:wrap; }
+
+    .small-card{
+      display:flex; gap:10px; align-items:center; padding:8px 10px; border-radius:10px;
+      background: rgba(255,255,255,0.02); border:1px solid var(--glass-border); color:var(--muted);
+      font-size:13px;
+    }
+
+    /* resume button special */
+    .resume-btn{ background: linear-gradient(90deg, rgba(0,255,255,0.06), rgba(123,61,255,0.04)); color:var(--accent); }
+
+    /* QR popup */
+    .qr{
+      margin-left:8px; width:46px; height:46px; padding:6px; border-radius:10px; background:rgba(255,255,255,0.02);
+      display:inline-grid; place-items:center; border:1px solid var(--glass-border);
+    }
+    .qr img{ width:40px; height:40px; display:block; }
+
+    /* toggle */
+    .toggle {
+      display:inline-flex; align-items:center; gap:8px; padding:6px 8px; border-radius:999px;
+      border:1px solid var(--glass-border); background:rgba(255,255,255,0.02);
+    }
+    .toggle button{ border:0; background:transparent; color:var(--accent); cursor:pointer; font-weight:700; padding:6px 10px; border-radius:8px; }
+    .toggle button.active{ background:linear-gradient(90deg,var(--accent),#7b61ff); color:#021; padding:6px 10px; border-radius:8px; font-weight:700; }
+
+    /* footer small */
+    .foot{ margin-top:20px; font-size:13px; color:var(--muted); opacity:0.9; }
+
+    /* responsive small adjustments */
+    @media (max-width:480px){
+      .profile{ flex-direction:column; gap:10px; }
+      .links{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- floating orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <!-- top social bar -->
+  <div class="topbar" role="navigation" aria-label="social links">
+    <a href="https://github.com/Theerthananda" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i><span class="label">GitHub</span></a>
+    <a href="https://www.linkedin.com/in/theerthananda" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i><span class="label">LinkedIn</span></a>
+    <a href="https://www.instagram.com/__theerthananda__gowda__?igsh=MTV6d2JkZmNtaXZ4NQ==" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i><span class="label">Instagram</span></a>
+
+    <div style="width:12px"></div>
+
+    <div class="toggle" title="Theme">
+      <button id="lightBtn">Light</button>
+      <button id="darkBtn" class="active">Dark</button>
+    </div>
+  </div>
+
+  <!-- main card -->
+  <main class="card" id="mainCard" role="main">
+    <div class="profile">
+      <div class="avatar"><img src="me.JPG" alt="Profile photo"></div>
+      <div>
+        <div class="title">THEERTHANANDA</div>
+        <div class="subtitle" id="typing">Programmer • Developer • Tech Enthusiast</div>
+      </div>
+    </div>
+
+    <!-- links -->
+    <div class="links">
+      <a class="btn" href="https://github.com/Theerthananda" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/theerthananda" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a class="btn" href="https://www.instagram.com/__theerthananda__gowda__?igsh=MTV6d2JkZmNtaXZ4NQ==" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a class="btn resume-btn" href="resume.pdf" download><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+      <a class="btn" href="https://youtube.com/@theerthananda_gowda3?si=8hwbPycnPbO3stie" target="_blank" rel="noreferrer"><i class="fa-brands fa-youtube"></i> YouTube</a>
+      <a class="btn" href="mailto:220317@admcujire.in"><i class="fa-solid fa-envelope"></i> Email</a>
+    </div>
+
+    <!-- small info row: visitor counter + QR + contact -->
+    <div class="info-row" style="justify-content:center; margin-top:18px;">
+      <div class="small-card" id="visitorCard"><i class="fa-regular fa-eye"></i> Visitors: <span id="visitorCount">—</span></div>
+
+      <div class="small-card">
+        <div style="display:flex;gap:8px;align-items:center">
+          <div class="qr" title="Scan to open this page" id="qrWrap">
+            <img id="qrImg" alt="QR code">
+          </div>
+          <div style="font-size:13px;color:var(--muted)">Scan to open</div>
+        </div>
+      </div>
+
+      <div class="small-card">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+918431265980" style="color:var(--muted); text-decoration:none; font-weight:700; margin-left:6px">+91 84312 65980</a>
+      </div>
+    </div>
+
+    <div class="foot">© 2025 THEERTHANANDA — Clean developer landing page</div>
+  </main>
+
+  <script>
+    /* ---------- THEME TOGGLE (persist in localStorage) ---------- */
+    const root = document.documentElement;
+    const lightBtn = document.getElementById('lightBtn');
+    const darkBtn  = document.getElementById('darkBtn');
+
+    const applyTheme = (theme) => {
+      if(theme === 'light') {
+        document.documentElement.setAttribute('data-theme','light');
+        lightBtn.classList.add('active'); darkBtn.classList.remove('active');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        darkBtn.classList.add('active'); lightBtn.classList.remove('active');
+      }
+      localStorage.setItem('pref-theme', theme);
+    };
+
+    // initialize
+    const saved = localStorage.getItem('pref-theme') || 'dark';
+    applyTheme(saved);
+    lightBtn.addEventListener('click', ()=> applyTheme('light'));
+    darkBtn.addEventListener('click', ()=> applyTheme('dark'));
+
+    /* ---------- TYPING EFFECT ---------- */
+    (function typing(){
+      const el = document.getElementById('typing');
+      const words = ['Programmer','Developer','Tech Enthusiast','Problem Solver','Open Source Lover'];
+      let i=0, j=0, dir=1;
+      function loop(){
+        el.textContent = words[i].slice(0,j);
+        j += dir;
+        if(j>words[i].length){ dir=-1; setTimeout(loop,900); return; }
+        if(j===0){ dir=1; i=(i+1)%words.length; }
+        setTimeout(loop,80);
+      }
+      loop();
+    })();
+
+    /* ---------- QR CODE: uses Google Chart API with current page URL ---------- */
+    (function makeQR(){
+      const qrImg = document.getElementById('qrImg');
+      const url = window.location.href;
+      // Google Chart API for QR (simple, free)
+      const qrUrl = 'https://chart.googleapis.com/chart?cht=qr&chs=220x220&chl=' + encodeURIComponent(url);
+      qrImg.src = qrUrl;
+    })();
+
+    /* ---------- Visitor counter via CountAPI (free) ---------- */
+    (function visitorCount(){
+      const el = document.getElementById('visitorCount');
+      // unique namespace and key. You can change namespace/key if you like.
+      const namespace = 'theerthananda.dev';
+      const key = 'linktree';
+      const api = `https://api.countapi.xyz/hit/${namespace}/${key}`;
+      fetch(api).then(r=>r.json()).then(res=>{
+        if(res && res.value) el.textContent = res.value;
+        else el.textContent = '—';
+      }).catch(err=>{
+        // fallback (per-client): show local visits
+        let v = Number(localStorage.getItem('local_visit')||0)+1;
+        localStorage.setItem('local_visit', v);
+        el.textContent = v + ' (local)';
+      });
+    })();
+
+    /* ---------- Accessibility: open QR in new tab on click ---------- */
+    document.getElementById('qrWrap').addEventListener('click', function(){
+      window.open(window.location.href, '_blank');
+    });
+
+  </script>
+</body>
+</html>
