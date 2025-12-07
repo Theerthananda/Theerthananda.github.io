@@ -1,218 +1,235 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Theerthananda — Dev Links</title>
 
-  <!-- Google Font + FontAwesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- SEO / Social preview -->
+  <meta name="description" content="Theerthananda — Programmer & Developer. Quick links: GitHub, LinkedIn, YouTube, Email. Professional dev landing page." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Theerthananda — Dev Links" />
+  <meta property="og:description" content="Programmer • Developer • Tech Enthusiast — quick links and contact." />
+  <meta property="og:image" content="https://theerthananda.github.io/me.JPG" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0b72ff" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root{
-      --bg-1: #05060c;
-      --bg-2: #0a0f1f;
-      --card-bg: rgba(255,255,255,0.04);
-      --accent: #00eaff;
-      --muted: rgba(255,255,255,0.65);
-      --glass-border: rgba(0,255,255,0.12);
-    }
-    [data-theme="light"]{
-      --bg-1: #f6f7fb;
-      --bg-2: #e9eef8;
-      --card-bg: rgba(10,10,20,0.03);
-      --accent: #0b72ff;
-      --muted: rgba(0,0,0,0.6);
-      --glass-border: rgba(11,114,255,0.12);
-      color: #0b1220;
+      --accent: #0b72ff;        /* blue accent (light) */
+      --accent-dark: #00eaff;   /* neon accent (dark) */
+      --bg-dark-1: #05060c;
+      --bg-dark-2: #0a0f1f;
+      --card-dark: rgba(255,255,255,0.03);
+      --muted-dark: rgba(255,255,255,0.78);
+      --text-dark: #ffffff;
+      --bg-light: #ffffff;
+      --card-light: #f7fbff;
+      --muted-light: #475569;
+      --text-light: #0b1220;
+      --glass-dark: rgba(0,255,255,0.08);
+      --glass-light: rgba(11,114,255,0.10);
+      --radius: 16px;
+      --shadow-strong: 0 18px 50px rgba(2,6,23,0.6);
+      --shadow-soft: 0 8px 20px rgba(2,6,23,0.06);
+      --duration: 280ms;
     }
 
-    *{box-sizing:border-box}
+    /* Base */
+    html,body{height:100%;margin:0;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
     body{
-      margin:0;
-      min-height:100vh;
-      font-family:"Poppins",sans-serif;
+      display:flex;align-items:center;justify-content:center;padding:28px;
       background:
-        radial-gradient(circle at 10% 10%, rgba(0,255,255,0.02), transparent 10%),
-        linear-gradient(180deg,var(--bg-1),var(--bg-2));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:32px;
-      color: white;
+        radial-gradient(circle at 10% 10%, rgba(11,114,255,0.02), transparent 10%),
+        linear-gradient(180deg,var(--bg-dark-1),var(--bg-dark-2));
+      color:var(--text-dark);
+      transition: background var(--duration) ease, color var(--duration) ease;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    [data-theme="light"] body{
+      background: linear-gradient(180deg,var(--bg-light),#f3f9ff);
+      color:var(--text-light);
     }
 
-    /* Floating orbs */
-    .orb{ position:fixed; border-radius:50%; filter:blur(30px); opacity:0.12; pointer-events:none;}
-    .orb.orb-1{width:360px;height:360px; left:-80px; top:-60px; background:linear-gradient(90deg,#00eaff,#5b9cff);}
-    .orb.orb-2{width:280px;height:280px; right:-60px; bottom:-40px; background:linear-gradient(90deg,#7b61ff,#00eaff);}
+    /* Decorative floating orbs */
+    .orb{ position:fixed; border-radius:50%; filter:blur(36px); opacity:0.10; pointer-events:none; transform:translateZ(0); z-index:0; }
+    .orb.orb-1{ width:420px;height:420px; left:-120px; top:-80px; background:linear-gradient(90deg,#00eaff,#5b9cff); animation:float1 9s ease-in-out infinite; }
+    .orb.orb-2{ width:300px;height:300px; right:-80px; bottom:-40px; background:linear-gradient(90deg,#7b61ff,#00eaff); animation:float2 12s ease-in-out infinite; }
+    @keyframes float1{ 0%{transform:translateY(0)} 50%{transform:translateY(18px)} 100%{transform:translateY(0)} }
+    @keyframes float2{ 0%{transform:translateY(0)} 50%{transform:translateY(-14px)} 100%{transform:translateY(0)} }
 
-    /* top social bar */
-    .topbar{
-      position:fixed; top:18px; left:50%; transform:translateX(-50%);
-      display:flex; gap:12px; align-items:center; z-index:40;
-      padding:6px 12px; border-radius:999px; backdrop-filter:blur(6px);
-      background: rgba(255,255,255,0.02); border:1px solid var(--glass-border);
-    }
-    .topbar a{ color:var(--accent); text-decoration:none; font-size:16px; display:inline-flex; gap:8px; align-items:center; padding:6px; }
-    .topbar a .label{ font-weight:600; color:var(--muted); font-size:13px; opacity:0.9; }
-
-    /* main card */
+    /* Card */
     .card{
-      width:100%;
-      max-width:560px;
-      border-radius:18px;
-      padding:36px;
-      background:var(--card-bg);
-      backdrop-filter: blur(10px) saturate(120%);
-      border:1px solid var(--glass-border);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.45);
-      position:relative;
-      z-index:20;
-      text-align:center;
-      transition: transform .35s ease;
+      position:relative; z-index:2;
+      width:100%; max-width:980px; border-radius:var(--radius);
+      padding:28px; display:flex; gap:28px; align-items:center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid var(--glass-dark);
+      box-shadow:var(--shadow-strong);
+      transform-origin:center;
+      transition: transform .32s cubic-bezier(.16,.84,.32,1), background var(--duration);
     }
+    [data-theme="light"] .card{
+      background:var(--card-light); border:1px solid var(--glass-light); box-shadow:var(--shadow-soft);
+    }
+    .card:hover{ transform:translateY(-6px); }
 
-    .card:hover{ transform: translateY(-6px) }
-
-    .profile{
-      display:flex; align-items:center; gap:18px; justify-content:center;
-      margin-bottom:16px;
-    }
-    .avatar{
-      width:120px; height:120px; border-radius:999px; overflow:hidden;
-      border:3px solid rgba(0,255,255,0.18); box-shadow: 0 6px 22px rgba(0,255,255,0.06);
-    }
+    /* Left profile (desktop) */
+    .profile{ min-width:260px; display:flex; gap:16px; align-items:center; }
+    .avatar{ width:120px;height:120px;border-radius:999px;overflow:hidden;border:4px solid rgba(11,114,255,0.12); box-shadow:0 8px 26px rgba(2,6,23,0.45); background:linear-gradient(180deg,#eaf6ff,#ffffff); }
     .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
 
-    .title{ font-size:26px; font-weight:700; letter-spacing:0.6px; margin:0; }
-    .subtitle{ margin:4px 0 18px; font-size:14px; color:var(--muted); }
+    .meta{ display:flex; flex-direction:column; gap:6px; }
+    .name{ font-size:22px; font-weight:700; letter-spacing:.4px; margin:0; color:var(--text-dark); transition: color var(--duration); }
+    [data-theme="light"] .name{ color:var(--text-light); }
+    .role{ font-size:13px; color:var(--muted-dark); margin:0; transition: color var(--duration); }
+    [data-theme="light"] .role{ color:var(--muted-light); }
 
-    /* links grid */
-    .links{
-      display:grid; gap:12px;
-      grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
-      margin-top:6px;
-    }
+    /* Right content */
+    .right{ flex:1; display:flex; flex-direction:column; gap:16px; align-items:stretch; }
+
+    .typing{ font-size:15px; font-weight:700; color:var(--accent-dark); transition: color var(--duration); }
+    [data-theme="light"] .typing{ color:var(--accent); }
+
+    /* Links grid */
+    .links{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:6px; }
     .btn{
-      display:flex; gap:12px; align-items:center; justify-content:center;
-      border-radius:12px; padding:14px 12px; text-decoration:none;
-      color:var(--accent); border:1px solid var(--glass-border);
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      transition: all .22s ease;
-      font-weight:600;
+      display:flex; align-items:center; justify-content:center; gap:12px;
+      padding:12px 14px; border-radius:12px; text-decoration:none; font-weight:700;
+      color:var(--accent-dark); background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.06); min-height:52px;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.18);
     }
-    .btn i{ font-size:18px; width:22px; text-align:center; }
-    .btn:hover{ transform:translateY(-6px); box-shadow: 0 10px 26px rgba(0,0,0,0.45); background: rgba(255,255,255,0.03); }
+    [data-theme="light"] .btn{ color:var(--accent); border:1px solid rgba(11,114,255,0.06); background:#fff; }
 
-    /* left column info area */
-    .info-row{ display:flex; gap:12px; align-items:center; justify-content:center; margin-top:18px; flex-wrap:wrap; }
+    /* neon hover by type */
+    .btn:hover{ transform:translateY(-6px); box-shadow:0 18px 38px rgba(2,6,23,0.28); }
+    .btn.github:hover{ box-shadow:0 18px 42px rgba(11,114,255,0.08); outline:0; border-color: rgba(11,114,255,0.22); color:var(--accent); }
+    .btn.linkedin:hover{ box-shadow:0 18px 42px rgba(11,114,255,0.06); border-color: rgba(11,114,255,0.22); color:var(--accent); }
+    .btn.youtube:hover{ box-shadow:0 18px 42px rgba(255,60,60,0.08); border-color: rgba(255,60,60,0.18); color:#ff4b4b; }
+    .btn.email:hover{ box-shadow:0 18px 42px rgba(0,200,120,0.06); border-color: rgba(0,200,120,0.12); color:#00b37e; }
 
-    .small-card{
-      display:flex; gap:10px; align-items:center; padding:8px 10px; border-radius:10px;
-      background: rgba(255,255,255,0.02); border:1px solid var(--glass-border); color:var(--muted);
-      font-size:13px;
+    /* disabled resume */
+    .resume-disabled{ opacity:0.56; pointer-events:none; filter:saturate(.6); }
+
+    /* info row */
+    .info-row{ display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:6px; }
+    .small{ display:inline-flex; gap:8px; align-items:center; padding:8px 12px; border-radius:10px; background:rgba(255,255,255,0.02); color:var(--muted-dark); border:1px solid rgba(255,255,255,0.04); }
+    [data-theme="light"] .small{ background:#fff; border:1px solid rgba(11,114,255,0.06); color:var(--muted-light); }
+
+    .share-group{ display:flex; gap:8px; align-items:center; }
+
+    /* topbar */
+    .topbar{ position:fixed; top:18px; left:50%; transform:translateX(-50%); display:flex; gap:12px; align-items:center; padding:8px 12px; border-radius:999px; background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); z-index:40; }
+    [data-theme="light"] .topbar{ background:#ffffffdd; border:1px solid rgba(11,114,255,0.08); }
+
+    .topbar a{ text-decoration:none; color:var(--accent-dark); font-weight:700; display:flex; gap:8px; align-items:center; padding:6px; border-radius:8px; }
+    [data-theme="light"] .topbar a{ color:var(--accent); }
+
+    /* visible theme buttons */
+    .theme-toggle{ display:inline-flex; gap:6px; border-radius:12px; padding:6px; border:1px solid rgba(255,255,255,0.03); background:rgba(255,255,255,0.02); }
+    [data-theme="light"] .theme-toggle{ border:1px solid rgba(11,114,255,0.06); background:#eef6ff; }
+    .theme-toggle button{ border:0; background:transparent; padding:6px 10px; border-radius:8px; cursor:pointer; font-weight:700; color:var(--accent-dark); }
+    [data-theme="light"] .theme-toggle button{ color:var(--accent); }
+    .theme-toggle .active{ background:var(--accent-dark); color:#021; padding:6px 10px; border-radius:8px; }
+    [data-theme="light"] .theme-toggle .active{ background:var(--accent); color:#fff; }
+
+    /* Animations */
+    .fade-in{ animation:fadeInUp .6s both; }
+    @keyframes fadeInUp{ from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)} }
+
+    /* responsiveness */
+    @media (max-width:900px){
+      .card{ flex-direction:column; gap:18px; padding:20px; max-width:680px; }
+      .profile{ width:100%; gap:12px; align-items:center; }
+      .links{ grid-template-columns:repeat(2,1fr); }
     }
-
-    /* resume button special */
-    .resume-btn{ background: linear-gradient(90deg, rgba(0,255,255,0.06), rgba(123,61,255,0.04)); color:var(--accent); }
-
-    /* QR popup */
-    .qr{
-      margin-left:8px; width:46px; height:46px; padding:6px; border-radius:10px; background:rgba(255,255,255,0.02);
-      display:inline-grid; place-items:center; border:1px solid var(--glass-border);
-    }
-    .qr img{ width:40px; height:40px; display:block; }
-
-    /* toggle */
-    .toggle {
-      display:inline-flex; align-items:center; gap:8px; padding:6px 8px; border-radius:999px;
-      border:1px solid var(--glass-border); background:rgba(255,255,255,0.02);
-    }
-    .toggle button{ border:0; background:transparent; color:var(--accent); cursor:pointer; font-weight:700; padding:6px 10px; border-radius:8px; }
-    .toggle button.active{ background:linear-gradient(90deg,var(--accent),#7b61ff); color:#021; padding:6px 10px; border-radius:8px; font-weight:700; }
-
-    /* footer small */
-    .foot{ margin-top:20px; font-size:13px; color:var(--muted); opacity:0.9; }
-
-    /* responsive small adjustments */
     @media (max-width:480px){
-      .profile{ flex-direction:column; gap:10px; }
-      .links{ grid-template-columns: 1fr; }
+      .avatar{ width:92px;height:92px; }
+      .links{ grid-template-columns:1fr; }
+      .btn{ justify-content:flex-start; padding-left:16px; }
+      .topbar{ display:none; }
+      .card{ padding:16px; }
     }
   </style>
 </head>
-
 <body>
-  <!-- floating orbs -->
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
 
-  <!-- top social bar -->
-  <div class="topbar" role="navigation" aria-label="social links">
-    <a href="https://github.com/Theerthananda" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i><span class="label">GitHub</span></a>
-    <a href="https://www.linkedin.com/in/theerthananda" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i><span class="label">LinkedIn</span></a>
-    <a href="https://www.instagram.com/__theerthananda__gowda__?igsh=MTV6d2JkZmNtaXZ4NQ==" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i><span class="label">Instagram</span></a>
+  <!-- orbs -->
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
 
-    <div style="width:12px"></div>
+  <!-- top floating bar -->
+  <div class="topbar" role="navigation" aria-label="social links and theme">
+    <a href="https://github.com/Theerthananda" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/theerthananda" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/__theerthananda__gowda__" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
 
-    <div class="toggle" title="Theme">
-      <button id="lightBtn">Light</button>
-      <button id="darkBtn" class="active">Dark</button>
+    <div class="theme-toggle" role="group" aria-label="Theme toggle">
+      <button id="lightBtn" title="Light mode">Light</button>
+      <button id="darkBtn" title="Dark mode" class="active">Dark</button>
     </div>
   </div>
 
   <!-- main card -->
-  <main class="card" id="mainCard" role="main">
-    <div class="profile">
-      <div class="avatar"><img src="me.jpg" alt="Profile photo"></div>
+  <main class="card fade-in" role="main" aria-labelledby="profileName">
+    <!-- left -->
+    <div class="profile" aria-hidden="false">
+      <div class="avatar" aria-hidden="true">
+        <img src="me.JPG" alt="Profile photo">
+      </div>
+      <div class="meta">
+        <h1 id="profileName" class="name">THEERTHANANDA</h1>
+        <p class="role">Programmer • Developer • Tech Enthusiast</p>
+        <p style="font-size:13px;color:rgba(255,255,255,0.65);margin:6px 0 0;">Location: India • Open to projects</p>
+      </div>
+    </div>
+
+    <!-- right -->
+    <div class="right">
       <div>
-        <div class="title">THEERTHANANDA</div>
-        <div class="subtitle" id="typing">Programmer • Developer • Tech Enthusiast</div>
+        <div id="typing" class="typing" aria-live="polite">Programmer</div>
       </div>
-    </div>
 
-    <!-- links -->
-    <div class="links">
-      <a class="btn" href="https://github.com/Theerthananda" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
-      <a class="btn" href="https://www.linkedin.com/in/theerthananda" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-      <a class="btn" href="https://www.instagram.com/__theerthananda__gowda__?igsh=MTV6d2JkZmNtaXZ4NQ==" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
-      <a class="btn resume-btn" href="resume.pdf" download><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
-      <a class="btn" href="https://youtube.com/@theerthananda_gowda3?si=8hwbPycnPbO3stie" target="_blank" rel="noreferrer"><i class="fa-brands fa-youtube"></i> YouTube</a>
-      <a class="btn" href="mailto:220317@admcujire.in"><i class="fa-solid fa-envelope"></i> Email</a>
-    </div>
+      <nav class="links" aria-label="primary links">
+        <a class="btn github" href="https://github.com/Theerthananda" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a class="btn linkedin" href="https://www.linkedin.com/in/theerthananda" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a class="btn instagram" href="https://www.instagram.com/__theerthananda__gowda__" target="_blank" rel="noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
 
-    <!-- small info row: visitor counter + QR + contact -->
-    <div class="info-row" style="justify-content:center; margin-top:18px;">
-      <div class="small-card" id="visitorCard"><i class="fa-regular fa-eye"></i> Visitors: <span id="visitorCount">—</span></div>
+        <a id="resumeBtn" class="btn resume-disabled" href="resume.pdf" download aria-disabled="true"><i class="fa-solid fa-file-arrow-down"></i> Resume (coming)</a>
 
-      <div class="small-card">
-        <div style="display:flex;gap:8px;align-items:center">
-          <div class="qr" title="Scan to open this page" id="qrWrap">
-            <img id="qrImg" alt="QR code">
-          </div>
-          <div style="font-size:13px;color:var(--muted)">Scan to open</div>
+        <a class="btn youtube" href="https://youtube.com/@theerthananda_gowda3" target="_blank" rel="noreferrer"><i class="fa-brands fa-youtube"></i> YouTube</a>
+        <a class="btn email" href="mailto:220317@admcujire.in"><i class="fa-solid fa-envelope"></i> Email</a>
+      </nav>
+
+      <div class="info-row">
+        <div class="small" aria-hidden="true"><i class="fa-regular fa-eye"></i> Visitors: <strong id="visitorCount">—</strong></div>
+
+        <div class="small share-group" role="group" aria-label="share">
+          <button id="copyBtn" class="btn" style="padding:8px 10px; min-height:auto;"><i class="fa-regular fa-copy"></i></button>
+          <button id="waBtn" class="btn" style="padding:8px 10px; min-height:auto;"><i class="fa-brands fa-whatsapp"></i></button>
+          <button id="nativeShare" class="btn" style="padding:8px 10px; min-height:auto;"><i class="fa-solid fa-share-nodes"></i></button>
         </div>
+
+        <div class="small"><i class="fa-solid fa-phone"></i> <a href="tel:+918431265980" style="color:inherit;text-decoration:none;font-weight:700;">+91 84312 65980</a></div>
       </div>
 
-      <div class="small-card">
-        <i class="fa-solid fa-phone"></i>
-        <a href="tel:+918431265980" style="color:var(--muted); text-decoration:none; font-weight:700; margin-left:6px">+91 84312 65980</a>
-      </div>
     </div>
-
-    <div class="foot">© 2025 THEERTHANANDA</div>
   </main>
 
   <script>
-    /* ---------- THEME TOGGLE (persist in localStorage) ---------- */
-    const root = document.documentElement;
+    // Smooth theme application with fade
     const lightBtn = document.getElementById('lightBtn');
     const darkBtn  = document.getElementById('darkBtn');
 
-    const applyTheme = (theme) => {
-      if(theme === 'light') {
+    function applyTheme(theme){
+      // soft fade by toggling attribute (CSS transitions handle visuals)
+      if(theme === 'light'){
         document.documentElement.setAttribute('data-theme','light');
         lightBtn.classList.add('active'); darkBtn.classList.remove('active');
       } else {
@@ -220,18 +237,19 @@
         darkBtn.classList.add('active'); lightBtn.classList.remove('active');
       }
       localStorage.setItem('pref-theme', theme);
-    };
+    }
 
     // initialize
-    const saved = localStorage.getItem('pref-theme') || 'dark';
-    applyTheme(saved);
+    const savedTheme = localStorage.getItem('pref-theme') || 'dark';
+    applyTheme(savedTheme);
+
     lightBtn.addEventListener('click', ()=> applyTheme('light'));
     darkBtn.addEventListener('click', ()=> applyTheme('dark'));
 
-    /* ---------- TYPING EFFECT ---------- */
+    /* Typing effect (short list: removed Open Source Lover) */
     (function typing(){
       const el = document.getElementById('typing');
-      const words = ['Programmer','Developer','Tech Enthusiast','Problem Solver','Open Source Lover'];
+      const words = ['Programmer','Developer','Tech Enthusiast','Problem Solver'];
       let i=0, j=0, dir=1;
       function loop(){
         el.textContent = words[i].slice(0,j);
@@ -243,40 +261,83 @@
       loop();
     })();
 
-    /* ---------- QR CODE: uses Google Chart API with current page URL ---------- */
-    (function makeQR(){
-      const qrImg = document.getElementById('qrImg');
-     const url = "https://theerthananda.github.io/";
-const qrUrl = "https://chart.googleapis.com/chart?cht=qr&chs=220x220&chl=" + encodeURIComponent(url);
-document.getElementById("qrImg").src = qrUrl;
-
-    })();
-
-    /* ---------- Visitor counter via CountAPI (free) ---------- */
+    /* Visitor counter using CountAPI (fallback to local if blocked) */
     (function visitorCount(){
       const el = document.getElementById('visitorCount');
-      // unique namespace and key. You can change namespace/key if you like.
-      const namespace = 'theerthananda.dev';
-      const key = 'linktree';
-      const api = `https://api.countapi.xyz/hit/${namespace}/${key}`;
+      const api = 'https://api.countapi.xyz/hit/theerthananda.dev/linktree';
       fetch(api).then(r=>r.json()).then(res=>{
         if(res && res.value) el.textContent = res.value;
         else el.textContent = '—';
-      }).catch(err=>{
-        // fallback (per-client): show local visits
+      }).catch(e=>{
         let v = Number(localStorage.getItem('local_visit')||0)+1;
         localStorage.setItem('local_visit', v);
         el.textContent = v + ' (local)';
       });
     })();
 
-    /* ---------- Accessibility: open QR in new tab on click ---------- */
-    document.getElementById('qrWrap').addEventListener('click', function(){
-      window.open(window.location.href, '_blank');
-    });
+    /* Resume auto-enable (HEAD) with animation */
+    (function enableResume(){
+      const btn = document.getElementById('resumeBtn');
+      fetch('resume.pdf', { method: 'HEAD' }).then(r=>{
+        if(r.ok){
+          btn.classList.remove('resume-disabled');
+          btn.removeAttribute('aria-disabled');
+          btn.innerHTML = '<i class="fa-solid fa-file-arrow-down"></i> Download Resume';
+          // small glow animation
+          btn.animate([
+            { boxShadow: '0 8px 30px rgba(11,114,255,0.08)' },
+            { boxShadow: '0 18px 48px rgba(11,114,255,0.18)' },
+            { boxShadow: '0 8px 30px rgba(11,114,255,0.08)' }
+          ], { duration: 900, iterations: 1 });
+        } else {
+          btn.innerHTML = '<i class="fa-solid fa-file-arrow-down"></i> Resume (coming)';
+        }
+      }).catch(e=>{
+        btn.innerHTML = '<i class="fa-solid fa-file-arrow-down"></i> Resume (coming)';
+      });
+    })();
+
+    /* Share features: copy, whatsapp, native share */
+    (function shareFeatures(){
+      const copyBtn = document.getElementById('copyBtn');
+      const waBtn = document.getElementById('waBtn');
+      const native = document.getElementById('nativeShare');
+      const url = window.location.href || 'https://theerthananda.github.io/';
+
+      copyBtn.addEventListener('click', async ()=>{
+        try{
+          await navigator.clipboard.writeText(url);
+          copyBtn.animate([{ transform:'scale(1)' },{ transform:'scale(0.92)' },{ transform:'scale(1)' }], { duration:220 });
+          copyBtn.title = 'Copied!';
+        }catch(e){
+          copyBtn.title = 'Copy failed';
+        }
+      });
+
+      waBtn.addEventListener('click', ()=>{
+        const text = encodeURIComponent('Check out Theerthananda — Dev Links: ' + url);
+        const wa = `https://wa.me/?text=${text}`;
+        window.open(wa,'_blank');
+      });
+
+      native.addEventListener('click', async ()=>{
+        if(navigator.share){
+          try{
+            await navigator.share({ title: 'Theerthananda — Dev Links', text: 'Open developer links', url });
+          }catch(e){
+            // user dismissed
+          }
+        } else {
+          // fallback: copy link
+          try{ await navigator.clipboard.writeText(url); native.title='Link copied'; }catch(e){ native.title='Share not available'; }
+        }
+      });
+    })();
+
+    /* Accessibility: keyboard handlers for theme toggle */
+    lightBtn.addEventListener('keyup', (e)=> { if(e.key === 'Enter') applyTheme('light'); });
+    darkBtn.addEventListener('keyup', (e)=> { if(e.key === 'Enter') applyTheme('dark'); });
 
   </script>
 </body>
 </html>
-
-
