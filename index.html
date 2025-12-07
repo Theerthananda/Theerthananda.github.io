@@ -246,10 +246,10 @@
     /* ---------- QR CODE: uses Google Chart API with current page URL ---------- */
     (function makeQR(){
       const qrImg = document.getElementById('qrImg');
-      const url = window.location.href;
-      // Google Chart API for QR (simple, free)
-      const qrUrl = 'https://chart.googleapis.com/chart?cht=qr&chs=220x220&chl=' + encodeURIComponent(url);
-      qrImg.src = qrUrl;
+     const url = "https://theerthananda.github.io/";
+const qrUrl = "https://chart.googleapis.com/chart?cht=qr&chs=220x220&chl=" + encodeURIComponent(url);
+document.getElementById("qrImg").src = qrUrl;
+
     })();
 
     /* ---------- Visitor counter via CountAPI (free) ---------- */
@@ -278,3 +278,4 @@
   </script>
 </body>
 </html>
+
