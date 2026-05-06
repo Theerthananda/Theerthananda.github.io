@@ -167,7 +167,7 @@ export default function Portfolio() {
 
             {/* CHANGE RESUME FILE PATH HERE */}
             <a
-              href="Theerthananda CV.pdf"
+              href="/Theerthananda CV.pdf"
               className="px-8 py-4 rounded-2xl border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition font-semibold"
             >
               Resume
@@ -180,7 +180,7 @@ export default function Portfolio() {
       <section id="about" className="py-24 px-6">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <img
-  src="theerthananda.jpg"
+  src="/theerthananda.jpg"
   alt="Theerthananda"
   className="w-72 h-72 rounded-3xl object-cover mx-auto shadow-2xl shadow-cyan-500/20 border border-cyan-400"
 />
@@ -398,7 +398,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-10">
             <div className="rounded-3xl overflow-hidden border border-white/10 bg-black/40 shadow-2xl">
               <img
-                src="SDM-College3-1-scaled.jpg"
+                src="/SDM-College3-1-scaled.jpg"
                 alt="SDM College"
                 className="w-full h-64 object-cover"
               />
@@ -413,7 +413,7 @@ export default function Portfolio() {
 
             <div className="rounded-3xl overflow-hidden border border-white/10 bg-black/40 shadow-2xl">
               <img
-                src="jss.png"
+                src="/jss.png"
                 alt="JSS College"
                 className="w-full h-64 object-cover"
               />
