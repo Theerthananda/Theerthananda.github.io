@@ -437,7 +437,7 @@ export default function Portfolio() {
 
           <div className="flex flex-col sm:flex-row justify-center gap-5">
             <a
-              href="theerthanandagowda@gmail.com"
+              href="mailto:theerthanandagowda@gmail.com"
               className="px-8 py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold"
             >
               Email
