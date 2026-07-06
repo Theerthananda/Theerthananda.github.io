@@ -46,6 +46,12 @@ export default function Portfolio() {
 
   const certificates = [
     {
+  title: 'Deloitte Technology Job Simulation',
+  image:
+    'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop',
+  link: 'https://www.linkedin.com/posts/theerthananda_i-just-completed-deloitte-australias-technology-share-7479884553801715712-yzF8/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
+},
+    {
       title: 'Advanced Python Topics: File Operations in Python',
       image:
         'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop',
