@@ -72,19 +72,40 @@ export default function Portfolio() {
   ];
 
   const experiences = [
-    {
-      company: 'Prodigy InfoTech',
-      role: 'Software Development Intern',
-      duration: '12/2024 – 12/2024 | Remote',
-      description1:
-        'Completed a 1-month internship in software development at Prodigy InfoTech.',
-      description2:
-        'Gained hands-on experience in coding, problem-solving, and development workflow.',
-      image:
-        'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop',
-      offerLetter: 'https://www.linkedin.com/posts/theerthananda_prodigyinfotech-share-7274767099128860672-hCVF?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
-    },
-  ];
+  {
+    company: "Deloitte Australia (Forage)",
+    role: "Technology Job Simulation",
+    duration: "July 2026 | Virtual Experience",
+    description1:
+      "Completed Deloitte Australia's Technology Job Simulation through Forage, working on practical software engineering tasks inspired by real business scenarios.",
+    description2:
+      "Strengthened problem-solving, software development, coding, and professional communication skills while completing industry-focused tasks.",
+    description3:
+      "Applied analytical thinking and development best practices to deliver solutions aligned with business requirements.",
+    image:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
+    offerLetter:
+      "https://www.linkedin.com/posts/theerthananda_i-just-completed-deloitte-australias-technology-share-7479884553801715712-yzF8",
+    button: "View Certificate",
+  },
+
+  {
+    company: "Prodigy InfoTech",
+    role: "Software Development Intern",
+    duration: "December 2024 | Remote",
+    description1:
+      "Completed a one-month Software Development Internship at Prodigy InfoTech.",
+    description2:
+      "Built real-world development skills through coding projects and problem-solving exercises.",
+    description3:
+      "Worked with modern development practices while improving programming and debugging skills.",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+    offerLetter:
+      "https://www.linkedin.com/posts/theerthananda_prodigyinfotech-share-7274767099128860672-hCVF",
+    button: "View Offer Letter",
+  },
+];
 
   const skills = [
     {
@@ -410,12 +431,12 @@ export default function Portfolio() {
                     </ul>
 
                     <a
-                      href={exp.offerLetter}
+                      href={exp.button}
                       target="_blank"
                       rel="noreferrer"
                       className="w-fit px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold"
                     >
-                      View Offer Letter
+                      {exp.button}
                     </a>
                   </div>
                 </div>
