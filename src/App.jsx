@@ -84,7 +84,7 @@ export default function Portfolio() {
       "Applied analytical thinking and development best practices to deliver solutions aligned with business requirements.",
     image:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
-    offerLetter:
+    link:
       "https://www.linkedin.com/posts/theerthananda_i-just-completed-deloitte-australias-technology-share-7479884553801715712-yzF8",
     button: "View Certificate",
   },
@@ -101,7 +101,7 @@ export default function Portfolio() {
       "Worked with modern development practices while improving programming and debugging skills.",
     image:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
-    offerLetter:
+    link:
       "https://www.linkedin.com/posts/theerthananda_prodigyinfotech-share-7274767099128860672-hCVF",
     button: "View Offer Letter",
   },
@@ -431,7 +431,7 @@ export default function Portfolio() {
                     </ul>
 
                     <a
-                      href={exp.button}
+                      href={exp.link}
                       target="_blank"
                       rel="noreferrer"
                       className="w-fit px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold"
