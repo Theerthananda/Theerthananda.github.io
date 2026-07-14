@@ -36,9 +36,9 @@ export default function Portfolio() {
     image:
       'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop',
 
-    liveDemo: 'https://your-blackjack-demo-link.com',
+    liveDemo: 'https://theerthananda.github.io/Blackjack-Pro-Casino-Edition/',
 
-    github: 'https://github.com/Theerthananda',
+    github: 'https://github.com/Theerthananda/Blackjack-Pro-Casino-Edition',
 
     inProgress: false,
   },
