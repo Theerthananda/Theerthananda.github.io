@@ -45,28 +45,39 @@ export default function Portfolio() {
 ];
 
   const certificates = [
+
+    {
+  title: 'JavaScript Unlocked – Google Developers Group On Campus',
+  image: '/JavaScript Unlocked – Google Developers Group On Campus.jpg',
+  link: 'https://www.linkedin.com/posts/theerthananda_javascript-webdevelopment-frontend-ugcPost-7483457407382298625-q17l/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
+},
+{
+  title: 'JavaScript Unlocked – Microsoft Student Chapter',
+  image: '/JavaScript Unlocked – Microsoft Student Chapter.jpg',
+  link: 'https://www.linkedin.com/posts/theerthananda_javascript-webdevelopment-frontend-ugcPost-7483457407382298625-q17l/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
+},
     {
   title: 'Deloitte Technology Job Simulation',
   image:
-    'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop',
+    '/Deloitte Technology Job Simulation.jpg',
   link: 'https://www.linkedin.com/posts/theerthananda_i-just-completed-deloitte-australias-technology-share-7479884553801715712-yzF8/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
 },
     {
       title: 'Advanced Python Topics: File Operations in Python',
       image:
-        'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop',
+        '/Advanced Python Topics File Operations in Python.jpg',
       link: 'https://www.linkedin.com/posts/theerthananda_python-infosys-learning-share-7417555798303666176-ZS6x?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
     },
     {
       title: 'Generative AI & Emerging Technologies Seminar',
       image:
-        'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop',
+        '/Generative AI & Emerging Technologies Semina.jpg',
       link: 'https://www.linkedin.com/posts/theerthananda_generativeai-iot-cloudcomputing-share-7434593824980598784-aUUJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
     },
     {
       title: 'Software Development  Internship',
       image:
-        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
+        '/Software Development Internship.jpg',
       link: 'https://www.linkedin.com/posts/theerthananda_internship-softwaredevelopment-learningjourney-share-7417823739687608321-tl6V?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
     },
   ];
