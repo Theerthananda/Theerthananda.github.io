@@ -8,6 +8,41 @@ export default function Portfolio() {
   }
 
   const projects = [
+    {
+  title: 'Smart Leads Tracker',
+
+   desc:
+    'Developed a feature-rich Chrome Extension to save and organize website links. Includes favorites, search, sorting, import/export, dark mode, website favicons, duplicate detection, and persistent local storage. Designed for the Chrome browser using the Chrome Extension API.',
+
+  tech: 'JavaScript • HTML • CSS • Chrome Extension API • Local Storage',
+
+  image:
+  'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop',
+
+  liveDemo: 'https://theerthananda.github.io/smart-leads-tracker/',
+
+  github: 'https://github.com/Theerthananda/smart-leads-tracker',
+
+  inProgress: false,
+},
+
+ {
+    title: 'Blackjack Game',
+
+    desc:
+      'Developed a browser-based Blackjack game using JavaScript. Implemented game logic, card handling, and interactive user gameplay.',
+
+    tech: 'JavaScript • HTML • CSS',
+
+    image:
+      'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop',
+
+    liveDemo: 'https://theerthananda.github.io/Blackjack-Pro-Casino-Edition/',
+
+    github: 'https://github.com/Theerthananda/Blackjack-Pro-Casino-Edition',
+
+    inProgress: false,
+  },
   {
     title: 'Women Safety App',
 
@@ -25,23 +60,6 @@ export default function Portfolio() {
     inProgress: true,
   },
 
-  {
-    title: 'Blackjack Game',
-
-    desc:
-      'Developed a browser-based Blackjack game using JavaScript. Implemented game logic, card handling, and interactive user gameplay.',
-
-    tech: 'JavaScript • HTML • CSS',
-
-    image:
-      'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop',
-
-    liveDemo: 'https://theerthananda.github.io/Blackjack-Pro-Casino-Edition/',
-
-    github: 'https://github.com/Theerthananda/Blackjack-Pro-Casino-Edition',
-
-    inProgress: false,
-  },
 ];
 
   const certificates = [
