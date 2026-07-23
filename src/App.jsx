@@ -1,103 +1,108 @@
 // ===============================
 // MODERN PORTFOLIO WEBSITE
 // ===============================
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function Portfolio() {
-  if (typeof document !== 'undefined') {
-    document.documentElement.style.scrollBehavior = 'smooth';
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: "ease-in-out",
+    });
+  }, []);
+  if (typeof document !== "undefined") {
+    document.documentElement.style.scrollBehavior = "smooth";
   }
 
   const projects = [
     {
-      title: 'Smart Leads Tracker',
+      title: "Smart Leads Tracker",
 
-      desc:
-        'Developed a feature-rich Chrome Extension to save and organize website links. Includes favorites, search, sorting, import/export, dark mode, website favicons, duplicate detection, and persistent local storage. Designed for the Chrome browser using the Chrome Extension API.',
+      desc: "Developed a feature-rich Chrome Extension to save and organize website links. Includes favorites, search, sorting, import/export, dark mode, website favicons, duplicate detection, and persistent local storage. Designed for the Chrome browser using the Chrome Extension API.",
 
-      tech: 'JavaScript • HTML • CSS • Chrome Extension API • Local Storage',
+      tech: "JavaScript • HTML • CSS • Chrome Extension API • Local Storage",
 
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop',
+      image:
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
 
-      liveDemo: 'https://theerthananda.github.io/smart-leads-tracker/',
+      liveDemo: "https://theerthananda.github.io/smart-leads-tracker/",
 
-      github: 'https://github.com/Theerthananda/smart-leads-tracker',
+      github: "https://github.com/Theerthananda/smart-leads-tracker",
 
-      note:
-        '⚠️ Live demo showcases the interface only. Full functionality is available when installed as a Chrome Extension.',
+      note: "⚠️ Live demo showcases the interface only. Full functionality is available when installed as a Chrome Extension.",
 
       inProgress: false,
     },
     {
-      title: 'Blackjack Game',
+      title: "Blackjack Game",
 
-      desc:
-        'Developed a browser-based Blackjack game using JavaScript. Implemented game logic, card handling, and interactive user gameplay.',
+      desc: "Developed a browser-based Blackjack game using JavaScript. Implemented game logic, card handling, and interactive user gameplay.",
 
-      tech: 'JavaScript • HTML • CSS',
+      tech: "JavaScript • HTML • CSS",
 
       image:
-        'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop',
+        "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop",
 
-      liveDemo: 'https://theerthananda.github.io/Blackjack-Pro-Casino-Edition/',
+      liveDemo: "https://theerthananda.github.io/Blackjack-Pro-Casino-Edition/",
 
-      github: 'https://github.com/Theerthananda/Blackjack-Pro-Casino-Edition',
+      github: "https://github.com/Theerthananda/Blackjack-Pro-Casino-Edition",
 
       inProgress: false,
     },
     {
-      title: 'Women Safety App',
+      title: "Women Safety App",
 
-      desc:
-        'Currently designing a safety-focused application inspired by real-world situations in India to improve emergency response and user security. Looking to collaborate with frontend developers and contributors passionate about impactful software solutions.',
+      desc: "Currently designing a safety-focused application inspired by real-world situations in India to improve emergency response and user security. Looking to collaborate with frontend developers and contributors passionate about impactful software solutions.",
 
-      tech: 'JavaScript • Node.js • MongoDB',
+      tech: "JavaScript • Node.js • MongoDB",
 
       image:
-        'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop',
+        "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
 
-      collaborate:
-        'mailto:theerthanandagowda@gmail.com',
+      collaborate: "mailto:theerthanandagowda@gmail.com",
 
       inProgress: true,
     },
-
   ];
 
   const certificates = [
+    {
+      title: "What Is Generative AI? – LinkedIn Learning",
+      image: "/what is gen ai.jpg",
+      link: "https://www.linkedin.com/posts/YOUR_POST",
+    },
 
     {
-      title: 'JavaScript Unlocked – Google Developers Group On Campus',
-      image: '/JavaScript Unlocked – Google Developers Group On Campus.jpg',
-      link: 'https://www.linkedin.com/posts/theerthananda_javascript-webdevelopment-frontend-ugcPost-7483457407382298625-q17l/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
+      title: "JavaScript Unlocked – Google Developers Group On Campus",
+      image: "/JavaScript Unlocked – Google Developers Group On Campus.jpg",
+      link: "https://www.linkedin.com/posts/theerthananda_javascript-webdevelopment-frontend-ugcPost-7483457407382298625-q17l/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8",
     },
     {
-      title: 'JavaScript Unlocked – Microsoft Student Chapter',
-      image: '/JavaScript Unlocked – Microsoft Student Chapter.jpg',
-      link: 'https://www.linkedin.com/posts/theerthananda_javascript-webdevelopment-frontend-ugcPost-7483457407382298625-q17l/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
+      title: "JavaScript Unlocked – Microsoft Student Chapter",
+      image: "/JavaScript Unlocked – Microsoft Student Chapter.jpg",
+      link: "https://www.linkedin.com/posts/theerthananda_javascript-webdevelopment-frontend-ugcPost-7483457407382298625-q17l/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8",
     },
     {
-      title: 'Deloitte Technology Job Simulation',
-      image:
-        '/Deloitte Technology Job Simulation.jpg',
-      link: 'https://www.linkedin.com/posts/theerthananda_i-just-completed-deloitte-australias-technology-share-7479884553801715712-yzF8/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
+      title: "Deloitte Technology Job Simulation",
+      image: "/Deloitte Technology Job Simulation.jpg",
+      link: "https://www.linkedin.com/posts/theerthananda_i-just-completed-deloitte-australias-technology-share-7479884553801715712-yzF8/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8",
     },
     {
-      title: 'Advanced Python Topics: File Operations in Python',
-      image:
-        '/Advanced Python Topics File Operations in Python.jpg',
-      link: 'https://www.linkedin.com/posts/theerthananda_python-infosys-learning-share-7417555798303666176-ZS6x?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
+      title: "Advanced Python Topics: File Operations in Python",
+      image: "/Advanced Python Topics File Operations in Python.jpg",
+      link: "https://www.linkedin.com/posts/theerthananda_python-infosys-learning-share-7417555798303666176-ZS6x?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8",
     },
     {
-      title: 'Generative AI & Emerging Technologies Seminar',
-      image:
-        '/Generative AI & Emerging Technologies Semina.jpg',
-      link: 'https://www.linkedin.com/posts/theerthananda_generativeai-iot-cloudcomputing-share-7434593824980598784-aUUJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
+      title: "Generative AI & Emerging Technologies Seminar",
+      image: "/Generative AI & Emerging Technologies Semina.jpg",
+      link: "https://www.linkedin.com/posts/theerthananda_generativeai-iot-cloudcomputing-share-7434593824980598784-aUUJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8",
     },
     {
-      title: 'Software Development  Internship',
-      image:
-        '/Software Development Internship.jpg',
-      link: 'https://www.linkedin.com/posts/theerthananda_internship-softwaredevelopment-learningjourney-share-7417823739687608321-tl6V?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
+      title: "Software Development  Internship",
+      image: "/Software Development Internship.jpg",
+      link: "https://www.linkedin.com/posts/theerthananda_internship-softwaredevelopment-learningjourney-share-7417823739687608321-tl6V?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8",
     },
   ];
 
@@ -114,8 +119,7 @@ export default function Portfolio() {
         "Applied analytical thinking and development best practices to deliver solutions aligned with business requirements.",
       image:
         "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
-      link:
-        "https://www.linkedin.com/posts/theerthananda_i-just-completed-deloitte-australias-technology-share-7479884553801715712-yzF8",
+      link: "https://www.linkedin.com/posts/theerthananda_i-just-completed-deloitte-australias-technology-share-7479884553801715712-yzF8",
       button: "View Certificate",
     },
 
@@ -131,68 +135,58 @@ export default function Portfolio() {
         "Worked with modern development practices while improving programming and debugging skills.",
       image:
         "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
-      link:
-        "https://www.linkedin.com/posts/theerthananda_prodigyinfotech-share-7274767099128860672-hCVF",
+      link: "https://www.linkedin.com/posts/theerthananda_prodigyinfotech-share-7274767099128860672-hCVF",
       button: "View Offer Letter",
     },
   ];
 
   const skills = [
     {
-      name: 'Java',
-      logo:
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+      name: "Java",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
     },
     {
-      name: 'C',
-      logo:
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
+      name: "C",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
     },
     {
-      name: 'JavaScript',
-      logo:
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+      name: "JavaScript",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     },
     {
-      name: 'Node.js',
-      logo:
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+      name: "Node.js",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     },
     {
-      name: 'SQL',
-      logo:
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+      name: "SQL",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     },
     {
-      name: 'DSA',
-      logo:
-        'https://cdn-icons-png.flaticon.com/512/2103/2103633.png',
+      name: "DSA",
+      logo: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png",
     },
     {
-      name: 'Git',
-      logo:
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+      name: "Git",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     },
     {
-      name: 'GitHub',
-      logo:
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+      name: "GitHub",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
     },
     {
-      name: 'Linux',
-      logo:
-        'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg',
+      name: "Linux",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans overflow-x-hidden relative">
+    <div className="min-h-screen bg-black text-white font-sans overflow-x-hidden relative pt-24">
       {/* BACKGROUND EFFECTS */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 blur-3xl rounded-full"></div>
       <div className="absolute top-40 right-0 w-96 h-96 bg-purple-500/20 blur-3xl rounded-full"></div>
 
       {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 backdrop-blur-xl bg-black/40 border-b border-cyan-500/10 shadow-lg shadow-cyan-500/5">
+      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/80 border-b border-cyan-500/10 shadow-lg shadow-cyan-500/5">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           {/* CHANGE YOUR NAME HERE */}
           <div className="flex items-center gap-3 ml-2">
@@ -204,19 +198,57 @@ export default function Portfolio() {
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-sm text-gray-300 bg-white/5 px-6 py-3 rounded-full border border-white/10 backdrop-blur-md">
-            <a href="#about" className="hover:text-cyan-400 transition duration-300 hover:scale-110">About</a>
-            <a href="#skills" className="hover:text-cyan-400 transition duration-300 hover:scale-110">Skills</a>
-            <a href="#projects" className="hover:text-cyan-400 transition duration-300 hover:scale-110">Projects</a>
-            <a href="#certifications" className="hover:text-cyan-400 transition duration-300 hover:scale-110">Certifications</a>
-            <a href="#experience" className="hover:text-cyan-400 transition duration-300 hover:scale-110">Experience</a>
-            <a href="#education" className="hover:text-cyan-400 transition duration-300 hover:scale-110">Education</a>
-            <a href="#contact" className="hover:text-cyan-400 transition duration-300 hover:scale-110">Contact</a>
+            <a
+              href="#about"
+              className="hover:text-cyan-400 transition duration-300 hover:scale-110"
+            >
+              About
+            </a>
+            <a
+              href="#skills"
+              className="hover:text-cyan-400 transition duration-300 hover:scale-110"
+            >
+              Skills
+            </a>
+            <a
+              href="#projects"
+              className="hover:text-cyan-400 transition duration-300 hover:scale-110"
+            >
+              Projects
+            </a>
+            <a
+              href="#certifications"
+              className="hover:text-cyan-400 transition duration-300 hover:scale-110"
+            >
+              Certifications
+            </a>
+            <a
+              href="#experience"
+              className="hover:text-cyan-400 transition duration-300 hover:scale-110"
+            >
+              Experience
+            </a>
+            <a
+              href="#education"
+              className="hover:text-cyan-400 transition duration-300 hover:scale-110"
+            >
+              Education
+            </a>
+            <a
+              href="#contact"
+              className="hover:text-cyan-400 transition duration-300 hover:scale-110"
+            >
+              Contact
+            </a>
           </div>
         </div>
       </nav>
 
       {/* HERO SECTION */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 text-center">
+      <section
+        data-aos="fade-up"
+        className="relative min-h-screen flex items-center justify-center px-6 text-center"
+      >
         <div className="max-w-4xl z-10">
           <p className="text-cyan-400 uppercase tracking-[0.3em] mb-4 text-sm">
             Welcome To My Portfolio
@@ -231,7 +263,9 @@ export default function Portfolio() {
           </h2>
 
           <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed text-lg mb-10">
-            I am passionate about software development, problem-solving, and building efficient applications that provide practical real-world solutions.
+            I am passionate about software development, problem-solving, and
+            building efficient applications that provide practical real-world
+            solutions.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
@@ -244,17 +278,18 @@ export default function Portfolio() {
 
             {/* CHANGE RESUME FILE PATH HERE */}
             <a
-              href="/Theerthananda CV.pdf"
+              href="/Theerthananda_CV.pdf"
+              download="Theerthananda_Resume.pdf"
               className="px-8 py-4 rounded-2xl border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition font-semibold"
             >
-              Resume
+              Download Resume
             </a>
           </div>
         </div>
       </section>
 
       {/* ABOUT SECTION */}
-      <section id="about" className="py-24 px-6">
+      <section id="about" data-aos="fade-right" className="py-24 px-6">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <img
             src="/theerthananda.jpg"
@@ -272,16 +307,24 @@ export default function Portfolio() {
             </h2>
 
             <p className="text-gray-400 leading-relaxed text-lg mb-6">
-              I am passionate about software development, problem-solving, and building efficient applications that provide practical real-world solutions.
+              I am passionate about software development, problem-solving, and
+              building efficient applications that provide practical real-world
+              solutions.
             </p>
           </div>
         </div>
       </section>
 
       {/* SKILLS SECTION */}
-      <section id="skills" className="py-24 px-6 bg-white/5 backdrop-blur-md border-y border-white/10">
+      <section
+        id="skills"
+        data-aos="zoom-in"
+        className="py-24 px-6 bg-white/5 backdrop-blur-md border-y border-white/10"
+      >
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3 text-sm">Skills</p>
+          <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3 text-sm">
+            Skills
+          </p>
 
           <h2 className="text-4xl font-bold mb-14">Technologies I Work With</h2>
 
@@ -305,11 +348,15 @@ export default function Portfolio() {
       </section>
 
       {/* CERTIFICATIONS SECTION */}
-      <section id="certifications" className="py-24 px-6">
+      <section id="certifications" data-aos="fade-up" className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3 text-sm">Certificates</p>
-            <h2 className="text-4xl font-bold">Certifications & Achievements</h2>
+            <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3 text-sm">
+              Certificates
+            </p>
+            <h2 className="text-4xl font-bold">
+              Certifications & Achievements
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -327,7 +374,9 @@ export default function Portfolio() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold leading-relaxed mb-6">{cert.title}</h3>
+                  <h3 className="text-xl font-bold leading-relaxed mb-6">
+                    {cert.title}
+                  </h3>
 
                   <a
                     href={cert.link}
@@ -345,10 +394,12 @@ export default function Portfolio() {
       </section>
 
       {/* PROJECTS SECTION */}
-      <section id="projects" className="py-24 px-6">
+      <section id="projects" data-aos="fade-up" className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3 text-sm">Projects</p>
+            <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3 text-sm">
+              Projects
+            </p>
             <h2 className="text-4xl font-bold">Featured Projects</h2>
           </div>
 
@@ -375,7 +426,9 @@ export default function Portfolio() {
                 <div className="p-7">
                   <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
 
-                  <p className="text-gray-400 leading-relaxed mb-5">{project.desc}</p>
+                  <p className="text-gray-400 leading-relaxed mb-5">
+                    {project.desc}
+                  </p>
 
                   <p className="text-sm text-cyan-300">{project.tech}</p>
 
@@ -434,10 +487,12 @@ export default function Portfolio() {
       </section>
 
       {/* PROFESSIONAL EXPERIENCE SECTION */}
-      <section id="experience" className="py-24 px-6">
+      <section id="experience" data-aos="fade-left" className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3 text-sm">Experience</p>
+            <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3 text-sm">
+              Experience
+            </p>
             <h2 className="text-4xl font-bold">Professional Experience</h2>
           </div>
 
@@ -457,7 +512,9 @@ export default function Portfolio() {
                   <div className="p-10 flex flex-col justify-center">
                     <h3 className="text-3xl font-bold mb-3">{exp.company}</h3>
 
-                    <p className="text-cyan-400 text-xl font-medium mb-4">{exp.role}</p>
+                    <p className="text-cyan-400 text-xl font-medium mb-4">
+                      {exp.role}
+                    </p>
 
                     <p className="text-gray-400 mb-6">{exp.duration}</p>
 
@@ -483,10 +540,16 @@ export default function Portfolio() {
       </section>
 
       {/* EDUCATION SECTION */}
-      <section id="education" className="py-24 px-6 bg-white/5 border-y border-white/10">
+      <section
+        id="education"
+        data-aos="fade-up"
+        className="py-24 px-6 bg-white/5 border-y border-white/10"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3 text-sm">Education</p>
+            <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3 text-sm">
+              Education
+            </p>
             <h2 className="text-4xl font-bold">Academic Journey</h2>
           </div>
 
@@ -499,8 +562,12 @@ export default function Portfolio() {
               />
 
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-3">SDM College (Autonomous), Ujire</h3>
-                <p className="text-cyan-400 font-medium mb-4">B.Sc (Physics & Computer Science)</p>
+                <h3 className="text-2xl font-bold mb-3">
+                  SDM College (Autonomous), Ujire
+                </h3>
+                <p className="text-cyan-400 font-medium mb-4">
+                  B.Sc (Physics & Computer Science)
+                </p>
                 <p className="text-gray-400 mb-2">2022 – 05/2025</p>
                 <p className="text-gray-400">Ujire, Karnataka, India</p>
               </div>
@@ -514,8 +581,12 @@ export default function Portfolio() {
               />
 
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-3">JSS College, Ooty Road, Mysuru</h3>
-                <p className="text-cyan-400 font-medium mb-4">M.Sc (Computer Science)</p>
+                <h3 className="text-2xl font-bold mb-3">
+                  JSS College, Ooty Road, Mysuru
+                </h3>
+                <p className="text-cyan-400 font-medium mb-4">
+                  M.Sc (Computer Science)
+                </p>
                 <p className="text-gray-400 mb-2">09/2025 – Present</p>
                 <p className="text-gray-400">Mysuru, Karnataka, India</p>
               </div>
@@ -525,13 +596,18 @@ export default function Portfolio() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section id="contact" className="py-24 px-6 text-center">
+      <section
+        id="contact"
+        data-aos="fade-up"
+        className="py-24 px-6 text-center"
+      >
         <div className="max-w-3xl mx-auto">
-          <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3 text-sm">Contact</p>
+          <p className="text-cyan-400 uppercase tracking-[0.2em] mb-3 text-sm">
+            Contact
+          </p>
           <h2 className="text-5xl font-bold mb-8">Let’s Work Together</h2>
 
           <div className="flex justify-center gap-8 mt-10 flex-wrap">
-
             <a
               href="https://github.com/Theerthananda"
               target="_blank"
@@ -571,7 +647,6 @@ export default function Portfolio() {
               />
               <span>Email</span>
             </a>
-
           </div>
         </div>
       </section>
