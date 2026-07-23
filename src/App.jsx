@@ -250,7 +250,7 @@ export default function Portfolio() {
 
             {/* CHANGE RESUME FILE PATH HERE */}
             <a
-              href="/Theerthananda_CV.pdf"
+              href="/Theerthananda CV.pdf"
               download="Theerthananda_Resume.pdf"
               className="px-8 py-4 rounded-2xl border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black transition font-semibold"
             >
