@@ -44,6 +44,28 @@ export default function Portfolio() {
 
       inProgress: false,
     },
+
+    {
+      title: 'Developer Portfolio Website',
+
+      desc:
+        'Designed and developed a responsive personal portfolio website to showcase projects, technical skills, certifications, education, and professional experience. Features a modern UI, SEO optimization, GitHub Pages deployment, and Google Search Console integration to improve visibility and provide a professional online presence.',
+
+      tech:
+        'React • JavaScript • Tailwind CSS • HTML5 • GitHub Pages • SEO • Google Search Console',
+
+      image:
+        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop',
+
+      liveDemo: 'https://theerthananda.github.io/',
+
+      github: 'https://github.com/Theerthananda/theerthananda.github.io',
+
+      note:
+        '🚀 Continuously updated with new projects, certifications, and skills to reflect my latest work and learning.',
+
+      inProgress: false,
+    },
     {
       title: 'Women Safety App',
 
@@ -57,6 +79,9 @@ export default function Portfolio() {
 
       collaborate:
         'mailto:theerthanandagowda@gmail.com',
+
+      note:
+        '🚧 Currently in the planning and architecture phase. Seeking skilled frontend developers and strong backend developers to collaborate on building a scalable and impactful women safety application. Contributions and feedback are welcome.',
 
       inProgress: true,
     },
