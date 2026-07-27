@@ -91,7 +91,7 @@ export default function Portfolio() {
     {
       title: 'What Is Generative AI? – LinkedIn Learning',
       image: '/certificates/what is gen ai.jpg',
-      link: 'https://www.linkedin.com/posts/YOUR_POST',
+      link: 'https://www.linkedin.com/posts/theerthananda_generativeai-artificialintelligence-linkedinlearning-ugcPost-7486016615910871040-JQh3/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
     },
 
     {
