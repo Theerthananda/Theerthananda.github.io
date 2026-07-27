@@ -16,7 +16,7 @@ export default function Portfolio() {
 
       tech: 'JavaScript • HTML • CSS • Chrome Extension API • Local Storage',
 
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop',
+      image: '/projects/Smart_Leads_Tracker.png',
 
       liveDemo: 'https://theerthananda.github.io/smart-leads-tracker/',
 
@@ -35,8 +35,7 @@ export default function Portfolio() {
 
       tech: 'JavaScript • HTML • CSS',
 
-      image:
-        'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop',
+      image: '/projects/Blackjack_Game.png',
 
       liveDemo: 'https://theerthananda.github.io/Blackjack-Pro-Casino-Edition/',
 
@@ -54,8 +53,7 @@ export default function Portfolio() {
       tech:
         'React • JavaScript • Tailwind CSS • HTML5 • GitHub Pages • SEO • Google Search Console',
 
-      image:
-        'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop',
+      image: '/projects/Developer_Portfolio_Website.png',
 
       liveDemo: 'https://theerthananda.github.io/',
 
@@ -92,42 +90,42 @@ export default function Portfolio() {
 
     {
       title: 'What Is Generative AI? – LinkedIn Learning',
-      image: '/what is gen ai.jpg',
+      image: '/certificates/what is gen ai.jpg',
       link: 'https://www.linkedin.com/posts/YOUR_POST',
     },
 
     {
       title: 'JavaScript Unlocked – Google Developers Group On Campus',
-      image: '/JavaScript Unlocked – Google Developers Group On Campus.jpg',
+      image: '/certificates/JavaScript Unlocked – Google Developers Group On Campus.jpg',
       link: 'https://www.linkedin.com/posts/theerthananda_javascript-webdevelopment-frontend-ugcPost-7483457407382298625-q17l/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
     },
     {
       title: 'JavaScript Unlocked – Microsoft Student Chapter',
-      image: '/JavaScript Unlocked – Microsoft Student Chapter.jpg',
+      image: '/certificates/JavaScript Unlocked – Microsoft Student Chapter.jpg',
       link: 'https://www.linkedin.com/posts/theerthananda_javascript-webdevelopment-frontend-ugcPost-7483457407382298625-q17l/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
     },
     {
       title: 'Deloitte Technology Job Simulation',
       image:
-        '/Deloitte Technology Job Simulation.jpg',
+        '/certificates/Deloitte Technology Job Simulation.jpg',
       link: 'https://www.linkedin.com/posts/theerthananda_i-just-completed-deloitte-australias-technology-share-7479884553801715712-yzF8/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
     },
     {
       title: 'Advanced Python Topics: File Operations in Python',
       image:
-        '/Advanced Python Topics File Operations in Python.jpg',
+        '/certificates/Advanced Python Topics File Operations in Python.jpg',
       link: 'https://www.linkedin.com/posts/theerthananda_python-infosys-learning-share-7417555798303666176-ZS6x?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
     },
     {
       title: 'Generative AI & Emerging Technologies Seminar',
       image:
-        '/Generative AI & Emerging Technologies Semina.jpg',
+        '/certificates/Generative AI & Emerging Technologies Semina.jpg',
       link: 'https://www.linkedin.com/posts/theerthananda_generativeai-iot-cloudcomputing-share-7434593824980598784-aUUJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
     },
     {
       title: 'Software Development  Internship',
       image:
-        '/Software Development Internship.jpg',
+        '/certificates/Software Development Internship.jpg',
       link: 'https://www.linkedin.com/posts/theerthananda_internship-softwaredevelopment-learningjourney-share-7417823739687608321-tl6V?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8',
     },
   ];
