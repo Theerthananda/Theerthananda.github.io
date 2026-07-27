@@ -523,7 +523,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-10">
             <div className="rounded-3xl overflow-hidden border border-white/10 bg-black/40 shadow-2xl">
               <img
-                src="/SDM-College3-1-scaled.jpg"
+                src="/education/SDM-College3-1-scaled.jpg"
                 alt="SDM College"
                 className="w-full h-64 object-cover"
               />
@@ -538,7 +538,7 @@ export default function Portfolio() {
 
             <div className="rounded-3xl overflow-hidden border border-white/10 bg-black/40 shadow-2xl">
               <img
-                src="/jss.png"
+                src="/education/jss.png"
                 alt="JSS College"
                 className="w-full h-64 object-cover"
               />
