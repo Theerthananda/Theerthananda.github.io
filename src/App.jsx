@@ -4,7 +4,7 @@
 
 export default function Portfolio() {
   if (typeof document !== 'undefined') {
-    document.documentElement.style.scrollBehavior = 'smooth';
+    //document.documentElement.style.scrollBehavior = 'smooth';
   }
 
   const projects = [
