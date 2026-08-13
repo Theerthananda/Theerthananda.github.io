@@ -64,7 +64,7 @@ export default function Portfolio() {
 
       inProgress: false,
     },
-    {
+    /*{
       title: 'Women Safety App',
 
       desc:
@@ -82,7 +82,7 @@ export default function Portfolio() {
         '🚧 Currently in the planning and architecture phase. Seeking skilled frontend developers and strong backend developers to collaborate on building a scalable and impactful women safety application. Contributions and feedback are welcome.',
 
       inProgress: true,
-    },
+    },*/
 
   ];
 
