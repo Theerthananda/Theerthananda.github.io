@@ -83,7 +83,7 @@ export default function Portfolio() {
     {
       title: "Namaste JavaScript – NamasteDev",
       image: "/certificates/namaste-javascript.webp",
-      link: "https://namastedev.com/sc494802/certificates/namaste-javascript",
+      link: "https://www.linkedin.com/posts/theerthananda_javascript-namastejavascript-namastedev-share-7494298814992822272-cndo/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFNpaaMBG0jaW0IoFToHrcyqhBUQqGx8rD8",
     },
 
     {
